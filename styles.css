@@ -462,7 +462,20 @@ ul { list-style: none; }
   border-radius: 16px;
   padding: 40px;
   color: var(--white);
+  position: relative;
+  overflow: hidden;
 }
+.why-visual-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.18;
+  filter: grayscale(30%);
+  border-radius: 16px;
+}
+.why-visual > *:not(.why-visual-bg) { position: relative; z-index: 1; }
 .why-visual h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 24px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
 .cert-list { display: flex; flex-direction: column; gap: 16px; }
 .cert-item {
@@ -604,6 +617,67 @@ ul { list-style: none; }
   flex-wrap: wrap;
   gap: 12px;
   font-size: 0.82rem;
+}
+
+/* ===== SERVICE CARD IMAGE ===== */
+.service-card-img {
+  width: calc(100% + 64px);
+  margin: -32px -32px 24px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: var(--radius) var(--radius) 0 0;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .service-card-img { transform: scale(1.03); }
+/* Clip overflow created by negative margins */
+.service-card { overflow: hidden; }
+
+/* ===== OUR WORK GALLERY ===== */
+.gallery { padding: 90px 0; background: var(--light); }
+.gallery-header { text-align: center; margin-bottom: 48px; }
+.gallery-header .section-intro { margin: 14px auto 0; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 220px;
+  gap: 14px;
+}
+.gallery-item {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--primary);
+}
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease, filter 0.45s ease;
+  filter: brightness(0.92);
+}
+.gallery-item:hover img { transform: scale(1.06); filter: brightness(1); }
+.gallery-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 28px 16px 14px;
+  background: linear-gradient(transparent, rgba(7,14,28,0.72));
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  transform: translateY(4px);
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover .gallery-caption { transform: translateY(0); }
+@media (max-width: 700px) {
+  .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 160px; }
+  .gallery-item.tall { grid-row: span 1; }
+}
+@media (max-width: 480px) {
+  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
 }
 
 /* ===== SYMBOL STRIP (flame · snowflake · leaf) ===== */
