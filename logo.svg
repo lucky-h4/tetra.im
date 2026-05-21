@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <!-- Flame/body gradient: yellow centre → orange → red -->
+    <radialGradient id="bodyGrad" cx="45%" cy="65%" r="55%">
+      <stop offset="0%"   stop-color="#fbbf24"/>
+      <stop offset="40%"  stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#d42b1b"/>
+    </radialGradient>
+    <!-- Fish body gradient: bright → deep blue -->
+    <linearGradient id="fishGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </linearGradient>
+    <!-- Fish tail gradient: orange → red -->
+    <linearGradient id="tailGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#d42b1b"/>
+    </linearGradient>
+    <!-- Clip to circle so nothing bleeds outside -->
+    <clipPath id="logoClip">
+      <circle cx="150" cy="150" r="138"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── BACKGROUND CIRCLE ── -->
+  <circle cx="150" cy="150" r="141" fill="white" stroke="#7c3aed" stroke-width="15"/>
+
+  <!-- ── PHOENIX / FLAME-FISH ICON (clipped) ── -->
+  <g clip-path="url(#logoClip)">
+
+    <!-- Red flame — upper left tongue -->
+    <path d="M118,108
+             C112,88  104,66  116,44
+             C120,60  126,76  128,84
+             C132,64  142,52  152,44
+             C147,62  148,78  154,88
+             C158,66  172,56  180,54
+             C172,74  168,90  172,104
+             Z"
+          fill="#d42b1b"/>
+
+    <!-- Orange/yellow central bird body -->
+    <path d="M118,108
+             C120,92  132,84  150,87
+             C168,84  180,92  180,104
+             C178,118  166,126  150,126
+             C134,126  120,118  118,108
+             Z"
+          fill="url(#bodyGrad)"/>
+
+    <!-- Blue right wing — sweeps wide to the right -->
+    <path d="M174,98
+             C184,88  202,82  220,86
+             C212,96  200,102  190,106
+             C206,108  218,118  222,128
+             C206,122  188,116  176,114
+             Z"
+          fill="#1565c0"/>
+
+    <!-- Blue left accent wing -->
+    <path d="M122,100
+             C114,88  106,84  100,88
+             C106,96  112,102  120,106
+             Z"
+          fill="#1565c0"/>
+
+    <!-- Fish body — elongated blue oval -->
+    <path d="M118,128
+             C128,120  172,120  186,128
+             C190,134  188,142  178,146
+             C166,150  132,150  120,146
+             C110,142  112,134  118,128
+             Z"
+          fill="url(#fishGrad)"/>
+
+    <!-- Fish tail — orange/red, fanning right -->
+    <path d="M184,124
+             C198,116  224,120  228,130
+             C224,140  198,144  184,146
+             Z"
+          fill="url(#tailGrad)"/>
+
+    <!-- Fish eye -->
+    <circle cx="128" cy="136" r="4.5" fill="#0d47a1"/>
+    <circle cx="127" cy="135" r="1.8" fill="white"/>
+
+    <!-- Subtle fish scale line -->
+    <path d="M138,124 Q154,118 168,124" stroke="#90caf9" stroke-width="2" fill="none" opacity="0.6"/>
+
+  </g>
+
+  <!-- ── T.C.S HEADING ── -->
+  <text x="150" y="188"
+        text-anchor="middle"
+        font-family="'Arial Black', 'Arial Bold', Arial, sans-serif"
+        font-weight="900"
+        font-size="36"
+        letter-spacing="3"
+        fill="#111111">T.C.S</text>
+
+  <!-- ── SUBTITLE ── -->
+  <text x="150" y="207"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-weight="700"
+        font-size="12"
+        fill="#111111">Plumbing, Heating &amp; Refrigeration</text>
+
+  <!-- ── PHONE NUMBER ── -->
+  <text x="150" y="226"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-weight="700"
+        font-size="17"
+        fill="#111111">07624 464727</text>
+
+  <!-- ── BOTTOM THREE ICONS ── -->
+  <!-- Flame (heating) -->
+  <text x="104" y="264" text-anchor="middle" font-size="26">🔥</text>
+  <!-- Snowflake (refrigeration) -->
+  <text x="150" y="264" text-anchor="middle" font-size="26">❄️</text>
+  <!-- Leaf (eco) -->
+  <text x="196" y="264" text-anchor="middle" font-size="26">🍃</text>
+
+</svg>
