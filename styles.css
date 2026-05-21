@@ -385,7 +385,7 @@ ul { list-style: none; }
 .service-card li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
 /* ===== COMMERCIAL / DOMESTIC SPLIT ===== */
-.sectors { padding: 0 0 90px; }
+.sectors { padding: 90px 0; }
 .sectors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .sector-block {
   border-radius: 14px;
@@ -794,6 +794,11 @@ ul { list-style: none; }
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-card { display: none; }
   .sectors-grid { grid-template-columns: 1fr; }
+  .sector-block .sector-tag {
+    position: static;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
   .why-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
